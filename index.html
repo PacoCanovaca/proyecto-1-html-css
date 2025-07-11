@@ -7,7 +7,7 @@
     <link
       rel="shortcut icon"
       href="./assets/icons/favicon4.svg"
-      type="image/png"
+      type="image/svg"
     />
     <meta name="author" content="Paco Canovaca" />
     <meta name="description" content="El hacker que hizo temblar el sistema" />
@@ -20,7 +20,7 @@
   <body>
     <header>
       <!--Nav bar-->
-      <nav id="navbar">
+      <nav>
         <a href="#"
           ><img src="./assets/logos/Logo rojo.png" alt="Logo Mr. Robot rojo"
         /></a>
@@ -38,7 +38,7 @@
         >
       </nav>
       <!--Hero section-->
-      <section id="hero">
+      <section id="hero" class="hero">
         <h1>Elliot Alderson</h1>
         <p>El hacker que hizo temblar el sistema</p>
         <div>
@@ -48,7 +48,7 @@
     </header>
     <main>
       <!--About me-->
-      <section id="about-me">
+      <section id="about-me" class="about-me">
         <div>
           <h2>Sobre mí</h2>
           <p>Hola. Me llamo Elliot Alderson.</p>
@@ -73,33 +73,91 @@
         <img src="./assets/images/Foto Elliot.png" alt="Foto de Elliot" />
       </section>
       <!--Portfolio-->
-      <section id="portfolio">
+      <section id="portfolio" class="portfolio">
         <h2>Mi portafolio</h2>
         <div id="proyects">
           <article>
             <img src="./assets/logos/Allsafe logo.png" alt="Logo AllSafe" />
             <h3>AllSafe Security</h3>
-            <p>Desarrollé soluciones de protección para empresas, mientras vigilaba las grietas que otros ignoraban.</p>
+            <p>
+              Desarrollé soluciones de protección para empresas, mientras
+              vigilaba las grietas que otros ignoraban.
+            </p>
           </article>
           <article>
             <img src="./assets/logos/FSociety logo.png" alt="Logo FSociety" />
             <h3>FSociety</h3>
-            <p>Fundé un colectivo anónimo para exponer las verdades del sistema y devolver el control a la gente.</p>
+            <p>
+              Fundé un colectivo anónimo para exponer las verdades del sistema y
+              devolver el control a la gente.
+            </p>
           </article>
           <article>
             <img src="./assets/logos/ECorp logo.webp" alt="Logo Evil Corp" />
             <h3>Evil Corp (ataque)</h3>
-            <p>Orquesté un ataque coordinado para desmantelar las bases de una corporación corrupta y sus archivos financieros.</p>
+            <p>
+              Orquesté un ataque coordinado para desmantelar las bases de una
+              corporación corrupta y sus archivos financieros.
+            </p>
           </article>
           <article>
-            <img src="./assets/logos/bank-icon-logo-design-vector.jpg" alt="Icono Banco" />
+            <img
+              src="./assets/logos/bank-icon-logo-design-vector.jpg"
+              alt="Icono Banco"
+            />
             <h3>Reset Financiero</h3>
-            <p>Impulsé un colapso bancario global que puso a prueba el equilibrio entre caos y justicia.</p>
+            <p>
+              Impulsé un colapso bancario global que puso a prueba el equilibrio
+              entre caos y justicia.
+            </p>
           </article>
         </div>
       </section>
       <!--Contact form-->
-      <section id="contact-form"></section>
+      <section id="contact-form" class="contact-form">
+        <h2>¡Contáctame!</h2>
+        <form action="#">
+          <label for="name">Nombre*</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Tu nombre completo"
+            required
+          />
+          <label for="age">Edad*</label>
+          <input
+            id="age"
+            type="number"
+            placeholder="Tu edad"
+            min="14"
+            max="120"
+            required
+          />
+          <label for="email">Email*</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+          <p>¿Qué servicio necesitas?*</p>
+          <div id="servicio">
+            <div><input type="radio" name="servicio-solicitado" value="consulting" checked/>
+            <label for="consulting">Consultoría</label>
+            </div>
+            <div><input type="radio" name="servicio-solicitado" value="hacking" />
+            <label for="hacking">Hackeo</label>
+            </div>
+            <div><input type="radio" name="servicio-solicitado" value="destroy" />
+            <label for="destroy">Destruir el sistema global</label>
+            </div>
+          </div>
+          <p>En caso de querer tumbar el sistema:</p>
+          <textarea name="details" id="details" placeholder="Cuéntame los detalles de tu plan" rows="5" ></textarea>
+          <p>* apartado obligatorio</p>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>

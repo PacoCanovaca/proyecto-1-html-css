@@ -163,7 +163,7 @@ main {
   margin: auto;
 }
 
-#about-me {
+.about-me {
   background-color: var(--primary-color);
   padding: var(--big-spacing);
   display: flex;
@@ -172,7 +172,7 @@ main {
   gap: var(--std-spacing);
 }
 
-#about-me > div {
+.about-me > div {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -180,42 +180,46 @@ main {
   gap: var(--std-spacing);
 }
 
-#about-me > div > h2 {
+.about-me > div > h2 {
   font-family: var(--primary-font-family);
   font-size: 2rem;
 }
 
-#about-me > div > p {
+.about-me > div > p {
   font-size: 1.1rem;
   text-align: justify;
 }
 
-#about-me > div > p > span {
+.about-me > div > p > span {
   color: var(--tertiary-color);
 }
 
-#about-me > img {
+.about-me > img {
   width: 290px;
   box-shadow: 0 0 30px var(--secondary-color);
   margin: 0 0 0 var(--std-spacing);
 }
 
-#portfolio {
-  background-image: radial-gradient(circle, var(--primary-color), var(--tertiary-color));
-  padding: var(--std-spacing);
+.portfolio {
+  background-image: radial-gradient(
+    circle,
+    var(--primary-color),
+    var(--tertiary-color)
+  );
+  padding: var(--big-spacing);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: var(--std-spacing);
 }
 
-#portfolio > h2 {
+.portfolio > h2 {
   font-family: var(--primary-font-family);
   font-size: 2rem;
-  padding: var(--std-spacing);
 }
 
-#portfolio > div {
+.portfolio > div {
   margin: auto;
   display: grid;
   gap: var(--big-spacing);
@@ -223,7 +227,7 @@ main {
   grid-template-rows: 300px 300px;
 }
 
-#portfolio > div > article {
+.portfolio > div > article {
   font-size: 1.1rem;
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -234,12 +238,103 @@ main {
   text-align: center;
   gap: var(--small-spacing);
   padding: var(--std-spacing);
+  border: 2px solid var(--secondary-color);
   border-radius: var(--small-spacing);
   box-shadow: 10px 10px 10px rgb(122, 122, 122);
 }
 
-#portfolio > div > article > img {
+.portfolio > div > article:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.portfolio > div > article > img {
   width: 110px;
+}
+
+.contact-form {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  padding: var(--big-spacing);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--std-spacing);
+}
+
+.contact-form > h2 {
+  color: var(--primary-color);
+  font-family: var(--primary-font-family);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact-form > form {
+  background-color: var(--primary-color);
+  width: 90%;
+  max-width: 650px;
+  padding: var(--std-spacing);
+  border: 2px solid var(--tertiary-color);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-form > form > input {
+  height: 25px;
+}
+
+.contact-form > form > input,
+.contact-form > form > textarea,
+.contact-form > form > div {
+  margin-bottom: var(--std-spacing);
+}
+
+.contact-form > form > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-form > form > div > div {
+  padding-right: 5%;
+}
+
+.contact-form > form > div > div > input {
+  padding-right: 5%;
+  accent-color: var(--tertiary-color);
+}
+
+.contact-form > form > p:last-of-type {
+  font-size: 0.9rem;
+  align-self: flex-end;
+  margin-bottom: var(--std-spacing);
+}
+
+.contact-form > form > button {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  width: 70px;
+  align-self: center;
+  font-family: var(--secondary-font-family);
+  font-size: 1.1rem;
+}
+
+.contact-form > form > button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
+.contact-form > form > button:focus {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /*Media Queries*/
@@ -254,19 +349,18 @@ main {
     width: 30px;
   }
 
-  #about-me {
+  .about-me {
     flex-direction: column;
   }
 
-  #about-me > img {
+  .about-me > img {
     margin: var(--std-spacing) 0 0 0;
   }
 
-  #portfolio > div {
+  .portfolio > div {
     grid-template-columns: 400px;
     grid-auto-rows: 400px;
   }
-
 }
 
 @media (max-width: 625px) {
@@ -274,12 +368,16 @@ main {
     display: none;
   }
 
-  #about-me {
+  .about-me {
     padding: var(--std-spacing);
   }
 
-  #about-me > div > p {
-    font-size: 0.9rem;
+  .portfolio {
+    padding: var(--std-spacing);
+  }
+
+  .contact-form {
+    padding: var(--std-spacing);
   }
 }
 
@@ -300,12 +398,28 @@ main {
     text-align: center;
   }
 
-  #about-me > div {
+  .about-me > div {
     text-align: center;
   }
 
-  #portfolio > div {
-    grid-template-columns: 300px;
-    grid-auto-rows: 300px;
+  .about-me > div > p {
+    font-size: 0.9rem;
+  }
+
+  .portfolio > div {
+    grid-template-columns: 250px;
+    grid-auto-rows: 250px;
+  }
+
+  .portfolio > div > article {
+    font-size: 0.9rem;
+  }
+
+  .contact-form > form {
+    font-size: 0.9rem;
+  }
+
+  .contact-form > form > p:last-of-type {
+    font-size: 0.7rem;
   }
 }
