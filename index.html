@@ -20,7 +20,7 @@
   <body>
     <header>
       <!--Nav bar-->
-      <nav>
+      <nav id="nav-bar" class="nav-bar">
         <a href="#"
           ><img src="./assets/logos/Logo rojo.png" alt="Logo Mr. Robot rojo"
         /></a>
@@ -142,23 +142,62 @@
           />
           <p>¿Qué servicio necesitas?*</p>
           <div id="servicio">
-            <div><input type="radio" name="servicio-solicitado" value="consulting" checked/>
-            <label for="consulting">Consultoría</label>
+            <div>
+              <input
+                type="radio"
+                name="servicio-solicitado"
+                value="consulting"
+                checked
+              />
+              <label for="consulting">Consultoría</label>
             </div>
-            <div><input type="radio" name="servicio-solicitado" value="hacking" />
-            <label for="hacking">Hackeo</label>
+            <div>
+              <input type="radio" name="servicio-solicitado" value="hacking" />
+              <label for="hacking">Hackeo</label>
             </div>
-            <div><input type="radio" name="servicio-solicitado" value="destroy" />
-            <label for="destroy">Destruir el sistema global</label>
+            <div>
+              <input type="radio" name="servicio-solicitado" value="destroy" />
+              <label for="destroy">Destruir el sistema global</label>
             </div>
           </div>
           <p>En caso de querer tumbar el sistema:</p>
-          <textarea name="details" id="details" placeholder="Cuéntame los detalles de tu plan" rows="5" ></textarea>
+          <textarea
+            name="details"
+            id="details"
+            placeholder="Cuéntame los detalles de tu plan"
+            rows="5"
+          ></textarea>
           <p>* apartado obligatorio</p>
           <button type="submit">Enviar</button>
         </form>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section class="social" id="social">
+        <p>
+          El propietario de esta página se reserva el derecho a realizar los
+          servicios ofertados, quedando en su poder la decisión final en caso de
+          tener que llevar a cabo acciones poco éticas o demasiado arriesgadas.
+        </p>
+        <div class="line"></div>
+        <nav class="social-media" id="social-media">
+          <h3>Sígueme en mis redes sociales</h3>
+          <ul>
+            <li>
+              <a href="#"><img src="./assets/icons/Instagram_icon.png" alt="Icono de Instagram" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./assets/icons/facebook_icon.webp" alt="Icono de Facebook" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./assets/icons/twitter_icon.webp" alt="Icono de Twitter" /></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <aside class="copyright" id="copyright">
+        <p>&copy Elliot Alderson. Creado por Paco Canovaca</p>
+      </aside>
+    </footer>
   </body>
 </html>
